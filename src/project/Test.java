@@ -4,6 +4,6 @@ public class Test {
 	
 	
 	public Test() {
-		int x = 1;
+		int x = 1000;
 	}
 }
