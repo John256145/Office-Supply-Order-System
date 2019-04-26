@@ -41,10 +41,57 @@ public class Order
 		
 	}
 	
-	public void addOrder() {
+	public void addOrder(int uoID, String cID, String pID, String date, int amount) 
+	{//adding a one-time order
+		this.uoID = uoID;
+		this.cID = cID;
+		this.pID = pID;
+		this.date = date;
+		this.amount = amount;
+		repeated = false;
+		
+		uoIDList.add(uoID);
+		cIDList.add(cID);
+		pIDList.add(pID);
+		dateList.add(date);
+		amountList.add(amount);
+		repeatedList.add(false);
+		
+		dateendList.add(null);
+		periodList.add(0);
 		
 	}
 	
+	public void addOrder (int uoID, String cID, String pID, String date, int amount, String dateend, int period) 
+	{//adding a repeated order
+		this.uoID = uoID;
+		this.cID = cID;
+		this.pID = pID;
+		this.date = date;
+		this.amount = amount;
+		repeated = true;
+		this.dateend = dateend;
+		this.period = period;
+		
+		uoIDList.add(uoID);
+		cIDList.add(cID);
+		pIDList.add(pID);
+		dateList.add(date);
+		amountList.add(amount);
+		repeatedList.add(true);
+		
+		dateendList.add(dateend);
+		periodList.add(period);
+		
+	}
 	
+	public void deleteOrder (int uoID) 
+	{
+		
+		
+		
+		
+		
+	}
 	
 }
