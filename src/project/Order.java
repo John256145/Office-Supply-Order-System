@@ -109,7 +109,31 @@ public class Order
 		repeatedList.remove(index);
 	}
 	
+	public void printOrders()
+	{
+		for (int i=0; i<uoIDList.size(); i++)
+		{
+			System.out.print(uoIDList.get(i) + ", ");
+			System.out.print(cIDList.get(i) + ", ");
+			System.out.print(pIDList.get(i) + ", ");
+			System.out.print(dateList.get(i) + ", ");
+			System.out.print(amountList.get(i));
+			
+			if (repeatedList.get(i)) {
+				System.out.print(", " + periodList.get(i));
+				System.out.print(", " + dateendList.get(i));
+			}
+			
+			
+			System.out.println();
+		}
+		
+	}
 	
+	public void listOrders(String cID)
+	{
+		
+	}
 	
 	
 	
