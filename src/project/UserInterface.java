@@ -233,10 +233,53 @@ public class UserInterface {
 			
 			break;
 		case 3:
-			//
+			System.out.println("Please specify the order ID of the order you would like to delete > ");
+			boolean loop = true;
+			int deleteID = 0;
+			while (loop)
+			{
+				try
+				{
+				deleteID = scan.nextInt();
+				loop = false;
+				}catch (Exception e)
+				{
+				System.out.println("Please enter a valid integer.");
+				scan.next();
+				}
+			}
+			
+			boolean check = myOrder.deleteOrder(deleteID);
+			if (check)
+				System.out.println("Success");
+			else 
+				System.out.println("Operation failed. Did you provide the correct Order ID?");
+			
+			System.out.println("Would you like to return to the main menu? (Y/N): ");
+			String input30 = scan.next();
+			if (input30.contains("y") || input30.contains("Y") )
+			{
+				selection = 6;
+			}else
+			{
+				selection = 0;
+			}
+			
 			break;
 		case 4:
-			//
+			System.out.println("Please specify the customer ID> ");
+			String customerID = scan.next();
+			
+			myOrder.listOrders(customerID);
+			System.out.println("Would you like to return to the main menu? (Y/N): ");
+			String input40 = scan.next();
+			if (input40.contains("y") || input40.contains("Y") )
+			{
+				selection = 6;
+			}else
+			{
+				selection = 0;
+			}
 			break;
 		case 5:
 			//

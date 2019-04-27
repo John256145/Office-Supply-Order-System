@@ -1,12 +1,12 @@
 package project;
-
+import java.util.Scanner;
 public class OrderTest 
 {
 
 	public static void main(String[] args) 
 	{
 		
-		
+		Scanner scan = new Scanner(System.in);
 		Order myOrder = new Order();
 							//Company ID, Product ID, month, day, amount.
 													//If a repeated order: period, month end, day end.
@@ -28,6 +28,9 @@ public class OrderTest
 		System.out.println();
 		
 		myOrder.listOrders("Alphabet, Inc.");
+		
+		
+		
 		
 	}
 

@@ -97,8 +97,9 @@ public class Order
 		
 	}
 	
-	public void deleteOrder (int ID) 
+	public boolean deleteOrder (int ID) 
 	{
+		boolean success = false;
 		int index = 0;
 		int IDinarray;
 		for (int i = 0; i<uoIDList.size(); i++) 
@@ -107,21 +108,28 @@ public class Order
 			if (IDinarray == ID) 
 			{
 				index = i;
+				success = true;
 				break;
 			}
 		}
 		
-		uoIDList.remove(index);
-		cIDList.remove(index);
-		pIDList.remove(index);
-		monthList.remove(index);
-		dayList.remove(index);
-		amountList.remove(index);
 		
-		periodList.remove(index);
-		monthendList.remove(index);
-		dayendList.remove(index);
-		repeatedList.remove(index);
+		if (success) 
+		{
+			uoIDList.remove(index);
+			cIDList.remove(index);
+			pIDList.remove(index);
+			monthList.remove(index);
+			dayList.remove(index);
+			amountList.remove(index);
+			
+			periodList.remove(index);
+			monthendList.remove(index);
+			dayendList.remove(index);
+			repeatedList.remove(index);
+		}
+		
+		return success;
 	}
 	
 	public void printOrders()
@@ -148,13 +156,14 @@ public class Order
 	}
 	
 	
-	public void listOrders(String cID)
+	public boolean listOrders(String cID)
 	{
-		
+		boolean success = false;
 		for (int i=0; i<cIDList.size(); i++)
 		{
-			if (cIDList.get(i) == cID) // if the customer ID is found
+			if (cIDList.get(i).contains(cID)) // if the customer ID is found
 			{
+				success = true;
 				System.out.print(uoIDList.get(i) + ", ");
 				System.out.print(cIDList.get(i) + ", ");
 				System.out.print(pIDList.get(i) + ", ");
@@ -175,7 +184,7 @@ public class Order
 			}
 			
 		}
-		
+		return success;
 		
 	}
 	
