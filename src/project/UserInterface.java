@@ -282,7 +282,18 @@ public class UserInterface {
 			}
 			break;
 		case 5:
-			//
+			myOrder.printReport();
+			System.out.println("Would you like to return to the main menu? (Y/N): ");
+			String input50 = scan.next();
+			if (input50.contains("y") || input50.contains("Y") )
+			{
+				selection = 6;
+			}else
+			{
+				selection = 0;
+			}
+			
+			
 			break;
 		case 6:
 			System.out.print("Bye");

@@ -1,7 +1,5 @@
 package project;
 import java.util.ArrayList;
-import java.util.Random;
-
 public class Order 
 {
 	private int uoID; //Unique order ID (numeric)
@@ -155,6 +153,18 @@ public class Order
 		
 	}
 	
+	public void printReport()
+	{
+		for (int i=0; i<uoIDList.size(); i++)
+		{
+			System.out.print("2019/");
+			System.out.print(monthList.get(i) + ", ");
+			System.out.print(pIDList.get(i));
+			System.out.println();
+		}
+	}
+	
+	
 	
 	public boolean listOrders(String cID)
 	{
@@ -187,7 +197,5 @@ public class Order
 		return success;
 		
 	}
-	
-	
 	
 }
