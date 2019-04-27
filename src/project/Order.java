@@ -153,24 +153,25 @@ public class Order
 		
 		for (int i=0; i<cIDList.size(); i++)
 		{
-			if (cIDList.get(i) == cID) // if the customer order is found
-			{//print the order ( same code as printOrders() )
+			if (cIDList.get(i) == cID) // if the customer ID is found
+			{
+				System.out.print(uoIDList.get(i) + ", ");
+				System.out.print(cIDList.get(i) + ", ");
+				System.out.print(pIDList.get(i) + ", ");
+				System.out.print(monthList.get(i) + "/");
+				System.out.print(dayList.get(i) + "/2019, ");
+				System.out.print(amountList.get(i));
 				
-			
+				if (repeatedList.get(i)) 
+				{
+					System.out.print(", " + periodList.get(i));
+					System.out.print(", " + monthendList.get(i) + "/");
+					System.out.print(dayList.get(i) + "/2019");
+				}
 				
-//				System.out.print(uoIDList.get(i) + ", ");
-//				System.out.print(cIDList.get(i) + ", ");
-//				System.out.print(pIDList.get(i) + ", ");
-//				System.out.print(dateList.get(i) + ", ");
-//				System.out.print(amountList.get(i));
-//				
-//				if (repeatedList.get(i)) {
-//					System.out.print(", " + periodList.get(i));
-//					System.out.print(", " + dateendList.get(i));
-//				}
-//				
-//				
-//				System.out.println();
+				
+				System.out.println();
+				
 			}
 			
 		}

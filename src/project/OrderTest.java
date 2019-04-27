@@ -20,11 +20,15 @@ public class OrderTest
 		
 		myOrder.printOrders();
 		
-		myOrder.deleteOrder(8192);
+//		myOrder.deleteOrder(8192);
 		
 		System.out.println();
 		myOrder.printOrders();
 
+		System.out.println();
+		
+		myOrder.listOrders("Alphabet, Inc.");
+		
 	}
 
 }
