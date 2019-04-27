@@ -5,11 +5,14 @@ public class UserInterface {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int selection = 0;
+		boolean repeat = true;
 		
 		Scanner scan = new Scanner(System.in);
 		Order myOrder = new Order();
 		
-		do	
+		
+		
+		do
 		{
 		System.out.println("1: Specify a file name of orders to load");
 		System.out.println("2: Add an order or repeated order");
@@ -31,7 +34,7 @@ public class UserInterface {
 		
 		
 		
-		}while (selection <= 0 || selection > 6);
+		
 		
 		switch(selection)
 		{
@@ -211,11 +214,22 @@ public class UserInterface {
 			if (repeated)
 			{
 				myOrder.addOrder(input2, input3, input4, input5, input6, input7, input8, input9, input10);
+				System.out.println("Suceess");
 			}else
 			{
 				myOrder.addOrder(input2, input3, input4, input5, input6, input7);
+				System.out.println("Suceess");
 			}
-			System.out.print("Suceess");
+			
+			System.out.println("Would you like to return to the main menu? (Y/N): ");
+			String input0 = scan.next();
+			if (input0.contains("y") || input0.contains("Y") )
+			{
+				selection = 6;
+			}else
+			{
+				selection = 0;
+			}
 			
 			break;
 		case 3:
@@ -229,8 +243,16 @@ public class UserInterface {
 			break;
 		case 6:
 			System.out.print("Bye");
-		}
+			selection = 0;
+			break;
 		
+		default:
+			selection = 0;
+			break;
+			
+		}
+	
+		}while (selection >= 1 && selection <= 6);
 		
 	}
 
