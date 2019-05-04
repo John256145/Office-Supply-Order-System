@@ -1,30 +1,30 @@
-O,Argo Group International Holdings, Ltd.,Q8,3/23/2019,96
-R,Meritage Corporation,W2,12/22/2019,15,9,6/18/2019
-O,Weyerhaeuser Company,V7,8/28/2019,38
-O,Fidelity National Information Services, Inc.,T3,4/10/2019,6
-R,Avalara, Inc.,H3,2/13/2019,4,23,2/28/2019
-O,Qwest Corporation,U4,2/16/2019,145
-O,Varian Medical Systems, Inc.,Y6,8/9/2019,106
-R,City Office REIT, Inc.,H6,9/27/2019,106,29,9/16/2019
-R,Caleres, Inc.,D6,7/22/2019,119,23,1/8/2019
-R,Shinhan Financial Group Co Ltd,L4,3/7/2019,127,17,6/16/2019
-O,Prospect Capital Corporation,N9,11/11/2019,86
-O,3M Company,Q1,7/21/2019,24
-R,Cabot Oil & Gas Corporation,R1,2/22/2019,84,30,10/25/2019
-R,Allegheny Technologies Incorporated,W9,3/10/2019,132,5,5/28/2019
-O,Flaherty & Crumrine Preferred Securities Income Fund Inc,N7,8/9/2019,146
-R,Progressive Corporation (The),W9,7/10/2019,9,10,10/16/2019
-R,Western Gas Equity Partners, LP,H7,10/10/2019,97,5,2/23/2019
-O,Rayonier Advanced Materials Inc.,R3,1/26/2019,129
-R,International Paper Company,A4,2/3/2019,110,22,3/26/2019
-R,Entravision Communications Corporation,N7,5/13/2019,95,13,8/22/2019
-O,Bristow Group Inc,D6,10/23/2019,142
-R,Camping World Holdings, Inc.,M7,6/17/2019,68,30,11/25/2019
-O,Churchill Capital Corp,U2,4/10/2019,86
-R,Cantel Medical Corp.,Q0,3/29/2019,21,8,9/1/2019
-O,Fiduciary/Claymore Energy Infrastructure Fund,N2,11/17/2019,24
-O,AngloGold Ashanti Limited,F1,9/4/2019,102
-O,Vedanta  Limited,T5,6/23/2019,135
-O,American Tower Corporation (REIT),E9,5/13/2019,114
-O,NGL ENERGY PARTNERS LP,M9,11/22/2019,57
-O,Eagle Growth and Income Opportunities Fund,C5,3/9/2019,95
+R,Chegg, Inc.,S1,3/21/2019,43,22,10/27/2019
+O,Drive Shack Inc.,S1,11/23/2019,35
+O,Sally Beauty Holdings, Inc.,A6,5/26/2019,94
+O,Transdigm Group Incorporated,X0,7/25/2019,94
+O,John Hancock Financial Opportunities Fund,H6,4/6/2019,54
+O,Delaware Enhanced Global Dividend,V5,3/12/2019,138
+O,Stage Stores, Inc.,G2,8/2/2019,6
+O,City Office REIT, Inc.,I8,9/2/2019,96
+O,Apartment Investment and Management Company,C2,2/8/2019,142
+R,WellCare Health Plans, Inc.,S4,2/18/2019,110,11,5/10/2019
+R,J P Morgan Chase & Co,X3,2/18/2019,47,9,12/31/2019
+O,CNFinance Holdings Limited,E8,1/18/2019,18
+R,Copa Holdings, S.A.,W6,5/25/2019,80,15,10/20/2019
+O,Genuine Parts Company,Q4,8/12/2019,93
+R,Foot Locker, Inc.,Z8,3/21/2019,23,16,11/15/2019
+O,Advance Auto Parts Inc,S7,5/3/2019,0
+O,Arlington Asset Investment Corp,O4,12/3/2019,139
+O,Reinsurance Group of America, Incorporated,F9,10/25/2019,145
+R,MVC Capital, Inc.,I2,1/28/2019,77,30,12/7/2019
+R,Corporate Office Properties Trust,O7,2/18/2019,35,26,2/16/2019
+R,Armstrong Flooring, Inc.,E1,7/19/2019,130,21,9/27/2019
+R,Main Street Capital Corporation,E8,9/18/2019,123,13,12/5/2019
+O,Voya Global Advantage and Premium Opportunity Fund,O3,8/7/2019,100
+R,Ares Management Corporation,X9,8/14/2019,114,28,8/12/2019
+O,Taylor Morrison Home Corporation,F8,11/26/2019,68
+O,Hersha Hospitality Trust,E8,6/31/2019,82
+O,GigCapital, Inc.,L4,9/10/2019,37
+O,Royal Caribbean Cruises Ltd.,V2,10/14/2019,123
+R,BlueLinx Holdings Inc.,V6,5/6/2019,77,3,12/2/2019
+R,Donaldson Company, Inc.,K7,5/14/2019,45,2,5/22/2019
