@@ -52,6 +52,9 @@ public class Order
 		this.day = day;
 		this.amount = amount;
 		repeated = false;
+
+		
+		
 		
 		uoIDList.add(uoID);
 		cIDList.add(cID);
@@ -155,13 +158,40 @@ public class Order
 	
 	public void printReport()
 	{
-		for (int i=0; i<uoIDList.size(); i++)
-		{
-			System.out.print("2019/");
-			System.out.print(monthList.get(i) + ", ");
-			System.out.print(pIDList.get(i));
-			System.out.println();
+		
+
+		for (int j=0; j<13; j++)
+		{//iterates over every month
+			for (int i=0; i<uoIDList.size(); i++)
+			{//checks every order for a match with month j. If found, it prints the order
+				if (monthList.get(i) == j)
+				{
+					System.out.print(uoIDList.get(i) + ", ");
+					System.out.print(cIDList.get(i) + ", ");
+					System.out.print(pIDList.get(i) + ", ");
+					System.out.print(monthList.get(i) + "/");
+					System.out.print(dayList.get(i) + "/2019, ");
+					System.out.print(amountList.get(i));
+					if (repeatedList.get(i)) 
+					{
+						System.out.print(", " + periodList.get(i));
+						System.out.print(", " + monthendList.get(i) + "/");
+						System.out.print(dayList.get(i) + "/2019");
+					}
+					System.out.println();
+				}
+			}
 		}
+		
+		
+		
+//		for (int i=0; i<uoIDList.size(); i++)
+//		{
+//			System.out.print("2019/");
+//			System.out.print(monthList.get(i) + ", ");
+//			System.out.print(pIDList.get(i));
+//			System.out.println();
+//		}
 	}
 	
 	
