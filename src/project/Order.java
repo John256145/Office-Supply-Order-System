@@ -161,8 +161,6 @@ public class Order
 	
 	public void printReport()
 	{
-		
-
 		for (int j=1; j<=12; j++)
 		{//iterates over every month
 			System.out.println(monthsarray[j] + ":");
@@ -185,16 +183,6 @@ public class Order
 				}
 			}
 		}
-		
-		
-		
-//		for (int i=0; i<uoIDList.size(); i++)
-//		{
-//			System.out.print("2019/");
-//			System.out.print(monthList.get(i) + ", ");
-//			System.out.print(pIDList.get(i));
-//			System.out.println();
-//		}
 	}
 	
 	
