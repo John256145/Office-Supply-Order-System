@@ -1,5 +1,6 @@
 package project;
 import java.util.ArrayList;
+import java.util.Collections;
 public class Order 
 {
 	private int uoID; //Unique order ID (numeric)
@@ -160,7 +161,7 @@ public class Order
 	}
 
 	
-	public void printReport()
+	public void printReport2()
 	{
 		for (int j=1; j<=12; j++)
 		{//iterates over every month
@@ -169,25 +170,60 @@ public class Order
 			{//checks every order for a match with month j. If found, it prints the order
 				if (monthList.get(i) == j)
 				{
-					System.out.print("2019/");
-					System.out.print(monthList.get(i) + "/");
-					System.out.print(dayList.get(i) + ", ");
-					System.out.print(pIDList.get(i) + ", ");
-					System.out.print(amountList.get(i));
-					if (repeatedList.get(i)) 
+					ArrayList <Integer> in = new ArrayList <Integer>();
+
+					ArrayList <Integer> daysListNumerical = new ArrayList <Integer>();
+
+					in.add(i);
+					daysListNumerical.add(dayList.get(i));
+					
+					Collections.sort(daysListNumerical);
+					
+					int p;
+					int q;
+				
+				
+					for(int o=0; o<in.size();o++) 
 					{
-						System.out.print(", " + periodList.get(i));
-						System.out.print(", " + monthendList.get(i) + "/");
-						System.out.print(dayList.get(i) + "/2019");
+						
+						
+						
+					for(int l=0;l<daysListNumerical.size();l++) 
+					{
+						
+						
+						if(in.get(o)==(dayList.indexOf(daysListNumerical.get(l)))) 
+						{
+
+							
+							
+							System.out.print("2019/");
+							System.out.print(monthList.get(i) + "/");
+							System.out.print(dayList.get(i) + ", ");
+							System.out.print(pIDList.get(i) + ", ");
+							System.out.print(amountList.get(i));
+						
+						if (repeatedList.get(i)) 
+							{
+								System.out.print(", " + periodList.get(i));
+								System.out.print(", " + monthendList.get(i) + "/");
+								System.out.print(dayList.get(i) + "/2019");
+							}
+							System.out.println();
+							}  
+						}
+					
 					}
-					System.out.println();
+			
+					
+					
 				}
 			}
 		}
 	}
 	
-	public void printReportOld()
-	{
+	public void printReport()
+	{//keeping this one here just in case
 		for (int j=1; j<=12; j++)
 		{//iterates over every month
 			System.out.println(monthsarray[j] + ":");
