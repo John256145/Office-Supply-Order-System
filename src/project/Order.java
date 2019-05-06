@@ -291,7 +291,20 @@ public class Order
 		try 
 		{
 			Scanner file = new Scanner (new File ("order.txt") );
-			int linecounter = 0;
+			String orderhandler = "";
+			
+			while (file.hasNextLine()) 
+			{
+				orderhandler = file.nextLine();
+				String[] seperatedvalues = orderhandler.split(",");
+				
+				for (int i=0; i<seperatedvalues.length; i++)
+				{
+					System.out.println(seperatedvalues[i]);
+				}
+				
+			}
+			
 			
 		}
 		catch ( FileNotFoundException ioe )
@@ -305,6 +318,8 @@ public class Order
 			
 			ioe.printStackTrace();
 		}
+		
+		
 	}
 	
 	

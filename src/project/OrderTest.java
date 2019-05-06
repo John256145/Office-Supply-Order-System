@@ -37,7 +37,7 @@ public class OrderTest
 		
 		
 		
-		myOrder.printReport();
+		myOrder.loadOrders();
 		
 //		myOrder.deleteOrder(8192);
 //		

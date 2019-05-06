@@ -49,6 +49,24 @@ public class InputFileGenerator
 				ioe.printStackTrace();
 			}
 			// code continues here
+			
+			if (company.contains(","))
+			{//Some company names have commas and others don't. This will remove the commas from those that do
+				company = company.replace(",", "");
+			}
+			
+			if (company.contains(","))
+			{
+				company = company.replace(",", "");
+			}
+			
+			if (company.contains(","))
+			{
+				company = company.replace(",", "");
+			}
+			
+			
+			
 			pw.print(company + ",");
 			
 			int alphaindex = rng.nextInt(26);
