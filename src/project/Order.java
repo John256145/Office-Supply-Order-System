@@ -158,8 +158,35 @@ public class Order
 		}
 		
 	}
+
 	
 	public void printReport()
+	{
+		for (int j=1; j<=12; j++)
+		{//iterates over every month
+			System.out.println(monthsarray[j] + ":");
+			for (int i=0; i<uoIDList.size(); i++)
+			{//checks every order for a match with month j. If found, it prints the order
+				if (monthList.get(i) == j)
+				{
+					System.out.print("2019/");
+					System.out.print(monthList.get(i) + "/");
+					System.out.print(dayList.get(i) + ", ");
+					System.out.print(pIDList.get(i) + ", ");
+					System.out.print(amountList.get(i));
+					if (repeatedList.get(i)) 
+					{
+						System.out.print(", " + periodList.get(i));
+						System.out.print(", " + monthendList.get(i) + "/");
+						System.out.print(dayList.get(i) + "/2019");
+					}
+					System.out.println();
+				}
+			}
+		}
+	}
+	
+	public void printReportOld()
 	{
 		for (int j=1; j<=12; j++)
 		{//iterates over every month
