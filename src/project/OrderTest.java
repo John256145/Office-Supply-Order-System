@@ -39,10 +39,12 @@ public class OrderTest
 		
 		myOrder.loadOrders();
 		
+		
+		
 //		myOrder.deleteOrder(8192);
 //		
 //		System.out.println();
-//		myOrder.printOrders();
+		myOrder.printOrders();
 //
 //		System.out.println();
 //		

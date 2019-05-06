@@ -39,7 +39,25 @@ public class UserInterface {
 		switch(selection)
 		{
 		case 1:
-			myOrder.loadOrders();
+			
+			
+			boolean success = myOrder.loadOrders();
+			if (success)
+				System.out.println("Success.");
+			else
+				System.out.println("Fail.");
+			
+			System.out.println("Would you like to return to the main menu? (Y/N): ");
+			String input00 = scan.next();
+			if (input00.contains("y") || input00.contains("Y") )
+			{
+				selection = 6;
+			}else
+			{
+				selection = 0;
+			}
+			
+			
 			break;
 		case 2:
 			boolean repeated = false;

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import java.util.Random;
 public class Order 
 {
 	private int uoID; //Unique order ID (numeric)
@@ -286,8 +287,18 @@ public class Order
 		
 	}
 	
-	public void loadOrders() 
+	public int generateID()
 	{
+		int id;
+		Random rng = new Random();
+		id = rng.nextInt(9999);
+		return id;
+	}
+	
+	
+	public boolean loadOrders() 
+	{
+		boolean success = false;
 		try 
 		{
 			Scanner file = new Scanner (new File ("order.txt") );
@@ -295,13 +306,44 @@ public class Order
 			
 			while (file.hasNextLine()) 
 			{
+				boolean repeated = false;
 				orderhandler = file.nextLine();
 				String[] seperatedvalues = orderhandler.split(",");
 				
-				for (int i=0; i<seperatedvalues.length; i++)
+				if (seperatedvalues[0].contains("R"))
 				{
-					System.out.println(seperatedvalues[i]);
+					repeated = true;
 				}
+				
+				uoIDList.add(generateID());
+				cIDList.add(seperatedvalues[1]);
+				pIDList.add(seperatedvalues[2]);
+				monthList.add(0);
+				dayList.add(0);
+				
+				int amountfromstring = Integer.parseInt(seperatedvalues[4]);
+				amountList.add(amountfromstring);
+				
+				if (seperatedvalues.length > 5 && seperatedvalues[5] != null)
+				{
+//					String str = seperatedvalues[5];
+					int periodfromstring = Integer.parseInt(seperatedvalues[5]);
+					periodList.add(periodfromstring);
+					monthendList.add(0);
+					dayendList.add(0);
+					repeatedList.add(true);
+				}else
+				{	
+					periodList.add(0);
+					monthendList.add(0);
+					dayendList.add(0);
+					repeatedList.add(false);
+				}
+				success = true;
+//				for (int i=1; i<seperatedvalues.length; i++)
+//				{
+//					System.out.println(seperatedvalues[i]);
+//				}
 				
 			}
 			
@@ -318,7 +360,7 @@ public class Order
 			
 			ioe.printStackTrace();
 		}
-		
+		return success;
 		
 	}
 	
