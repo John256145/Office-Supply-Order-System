@@ -1,6 +1,10 @@
 package project;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 public class Order 
 {
 	private int uoID; //Unique order ID (numeric)
@@ -281,5 +285,28 @@ public class Order
 		return success;
 		
 	}
+	
+	public void loadOrders() 
+	{
+		try 
+		{
+			Scanner file = new Scanner (new File ("order.txt") );
+			int linecounter = 0;
+			
+		}
+		catch ( FileNotFoundException ioe )
+		{
+			
+			System.out.println("Error: File not found. Is there an order.txt?");
+			ioe.printStackTrace();
+		}
+		catch ( IOException ioe )
+		{
+			
+			ioe.printStackTrace();
+		}
+	}
+	
+	
 	
 }

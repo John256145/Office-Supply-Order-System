@@ -39,7 +39,7 @@ public class UserInterface {
 		switch(selection)
 		{
 		case 1:
-			//
+			myOrder.loadOrders();
 			break;
 		case 2:
 			boolean repeated = false;
