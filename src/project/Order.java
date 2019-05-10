@@ -156,7 +156,7 @@ public class Order
 			if (repeatedList.get(i)) {
 				System.out.print(", " + periodList.get(i));
 				System.out.print(", " + monthendList.get(i) + "/");
-				System.out.print(dayList.get(i) + "/2019");
+				System.out.print(dayendList.get(i) + "/2019");
 			}
 			
 			
@@ -212,7 +212,7 @@ public class Order
 							{
 								System.out.print(", " + periodList.get(i));
 								System.out.print(", " + monthendList.get(i) + "/");
-								System.out.print(dayList.get(i) + "/2019");
+								System.out.print(dayendList.get(i) + "/2019");
 							}
 							System.out.println();
 							}  
@@ -247,7 +247,7 @@ public class Order
 					{
 						System.out.print(", " + periodList.get(i));
 						System.out.print(", " + monthendList.get(i) + "/");
-						System.out.print(dayList.get(i) + "/2019");
+						System.out.print(dayendList.get(i) + "/2019");
 					}
 					System.out.println();
 				}
@@ -280,7 +280,7 @@ public class Order
 				{
 					System.out.print(", " + periodList.get(i));
 					System.out.print(", " + monthendList.get(i) + "/");
-					System.out.print(dayList.get(i) + "/2019");
+					System.out.print(dayendList.get(i) + "/2019");
 				}
 				
 				
