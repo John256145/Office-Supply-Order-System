@@ -86,7 +86,7 @@ public class InputFileGenerator
 			{
 				int randperiod = rng.nextInt(30 + 1 - 1) + 1;
 				pw.print("," + randperiod);
-				int randmonth2 = rng.nextInt(12 + 1 - 1) + 1;
+				int randmonth2 = rng.nextInt(12 + 1 - randmonth) + randmonth;
 				pw.print("," + randmonth2 + "/");
 				int randday2 = rng.nextInt(31 + 1 - 1) + 1;
 				pw.print(randday2 + "/2019");
