@@ -36,8 +36,8 @@ public class OrderTest
 		
 		
 		
-		
-		myOrder.loadOrders();
+		String f = "order.txt";
+		myOrder.loadOrders(f);
 		
 		
 		

@@ -40,12 +40,16 @@ public class UserInterface {
 		{
 		case 1:
 			
+			System.out.println("Please type the file name that you would like to load, including the extension > ");
+			String filename = scan.next();
 			
-			boolean success = myOrder.loadOrders();
+			boolean success = myOrder.loadOrders(filename);
 			if (success)
 				System.out.println("Success.");
 			else
+				
 				System.out.println("Fail.");
+			
 			
 			System.out.println("Would you like to return to the main menu? (Y/N): ");
 			String input00 = scan.next();

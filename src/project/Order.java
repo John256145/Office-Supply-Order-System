@@ -229,6 +229,8 @@ public class Order
 	
 	public void printReport()
 	{//keeping this one here just in case
+		
+		
 		for (int j=1; j<=12; j++)
 		{//iterates over every month
 			System.out.println(monthsarray[j] + ":");
@@ -251,6 +253,10 @@ public class Order
 				}
 			}
 		}
+		
+		
+		
+		
 	}
 	
 	
@@ -296,12 +302,15 @@ public class Order
 	}
 	
 	
-	public boolean loadOrders() 
+	public boolean loadOrders(String filename) 
 	{
+		if (filename.isEmpty())
+			filename = "order.txt";
+		
 		boolean success = false;
 		try 
 		{
-			Scanner file = new Scanner (new File ("order.txt") );
+			Scanner file = new Scanner (new File (filename) );
 			String orderhandler = "";
 			
 			while (file.hasNextLine()) 
@@ -318,19 +327,38 @@ public class Order
 				uoIDList.add(generateID());
 				cIDList.add(seperatedvalues[1]);
 				pIDList.add(seperatedvalues[2]);
-				monthList.add(0);
-				dayList.add(0);
+				
+				
+				String date = seperatedvalues[3];
+				String[] seperateddates = date.split("/");
+				
+				
+				int monthfromstr = 0;
+				int dayfromstr = 0;
+				monthfromstr = Integer.parseInt(seperateddates[0]);
+				dayfromstr = Integer.parseInt(seperateddates[1]);
+				monthList.add(monthfromstr);
+				dayList.add(dayfromstr);
+				
+
+				
 				
 				int amountfromstring = Integer.parseInt(seperatedvalues[4]);
 				amountList.add(amountfromstring);
 				
 				if (seperatedvalues.length > 5 && seperatedvalues[5] != null)
 				{
-//					String str = seperatedvalues[5];
 					int periodfromstring = Integer.parseInt(seperatedvalues[5]);
 					periodList.add(periodfromstring);
-					monthendList.add(0);
-					dayendList.add(0);
+					int monthfromstr2 = 0;
+					int dayfromstr2 = 0;
+					String date2 = seperatedvalues[6];
+					String[] seperateddates2 = date2.split("/");
+					
+					monthfromstr2 = Integer.parseInt(seperateddates2[0]);
+					dayfromstr2 = Integer.parseInt(seperateddates2[1]);
+					monthendList.add(monthfromstr2);
+					dayendList.add(dayfromstr2);
 					repeatedList.add(true);
 				}else
 				{	
@@ -340,10 +368,6 @@ public class Order
 					repeatedList.add(false);
 				}
 				success = true;
-//				for (int i=1; i<seperatedvalues.length; i++)
-//				{
-//					System.out.println(seperatedvalues[i]);
-//				}
 				
 			}
 			
@@ -352,7 +376,7 @@ public class Order
 		catch ( FileNotFoundException ioe )
 		{
 			
-			System.out.println("Error: File not found. Is there an order.txt?");
+			System.out.println("Error: File not found. Was the filename given correctly?");
 			ioe.printStackTrace();
 		}
 		catch ( IOException ioe )
